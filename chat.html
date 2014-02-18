@@ -1,0 +1,30 @@
+<head>
+  <title>Meteor Chat Demo</title>
+</head>
+
+<body>
+	<div class="chat-window">
+		<!-- > the carror signifies a template -->
+		{{> messages}}
+		{{> entryfield}}
+
+	</div>
+
+
+
+</body>
+
+<template name="entryfield">
+    <input type="text" id="name" placeholder="Name" /> <input type="text" id="message" placeholder="Your Message" />
+</template>
+
+<template name="messages">
+	<ul>
+		<!-- loop over the messages arrach -->
+		{{#each messages}}
+	    <li>
+	            <strong>{{name}}</strong>: {{message}} <span>{{time}}</span>
+	    </li>
+	    {{/each}}
+	</ul>
+</template>

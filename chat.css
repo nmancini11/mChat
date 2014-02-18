@@ -1,0 +1,13 @@
+/* CSS declarations go here */
+body {
+	margin: 0px auto;
+	max-width: 600px;
+
+}
+
+.chat-window {
+	width: 400px;
+	background-color: white;
+	border-radius: 4px;
+	margin: 0px auto;
+}
