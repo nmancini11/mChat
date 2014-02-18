@@ -1,30 +1,33 @@
 <head>
-  <title>Meteor Chat Demo</title>
+  <title>mChat</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700|Russo+One|Titillium+Web:400,300,200' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-	<div class="chat-window">
+	<div class="container">
 		<!-- > the carror signifies a template -->
+		<p id="welcome"></p>
 		{{> messages}}
 		{{> entryfield}}
-
-	</div>
-
-
-
+	<div>
 </body>
 
 <template name="entryfield">
-    <input type="text" id="name" placeholder="Name" /> <input type="text" id="message" placeholder="Your Message" />
+    <!-- <input type="text" id="name" placeholder="Name" /> --> <input type="text" id="message" placeholder="Type yo message foo!" />
 </template>
 
 <template name="messages">
-	<ul>
+	
+	<ul class="message-list">
 		<!-- loop over the messages arrach -->
 		{{#each messages}}
 	    <li>
-	            <strong>{{name}}</strong>: {{message}} <span>{{time}}</span>
+	            <span class="name">{{name}}:</span> 
+	            <span class="message">{{message}}</span>
+	            <span class="time">{{time}}</span>
 	    </li>
 	    {{/each}}
 	</ul>
+	
 </template>
